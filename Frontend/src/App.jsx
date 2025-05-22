@@ -13,7 +13,7 @@ import CategoryPage from "./pages/CategoryPage"
 import CartPage from "./pages/cartPage"
 import PurchaseSuccessPage from "./pages/PurchaseSuccessPage"
 import { useCartStore } from "./stores/useCartStore"
-import PurchaseCancelPage from "./pages/PurchaseCancelPage"
+
 
 function App() {
 
