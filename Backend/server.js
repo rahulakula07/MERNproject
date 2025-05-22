@@ -1,5 +1,5 @@
 import express from "express"
-import dotenv, { config } from "dotenv"
+import dotenv from "dotenv"
 import cookieParser from "cookie-parser"
 import authRoutes from "./routes/auth.route.js"
 import ProductsRoutes from "./routes/products.route.js"
@@ -17,7 +17,7 @@ const app=express()
 // console.log(process.env.PORT)
 const PORT=process.env.PORT ||5000;
 
-const __dirname = path.resolve()
+// const __dirname = path.resolve()
 app.use(express.json({limit:"10mb"}))
 app.use(cookieParser())
 
@@ -29,12 +29,12 @@ app.use("/api/coupons",couponRoutes)
 app.use("/api/payments",paymentRoutes)
 app.use("/api/analytics",analyticRoutes)
 
-if (process.env.NODE_ENV === "production"){
-    app.use(express.static(path.join(__dirname, "/Frontend/dist")));
-    app.get("*", (req, res) => {
-		res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"));
-	});
-}
+// if (process.env.NODE_ENV === "production"){
+//     app.use(express.static(path.join(__dirname, "/Frontend/dist")));
+//     app.get("*", (req, res) => {
+// 		res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"));
+// 	});
+// }
 app.listen(PORT,()=>{
     console.log("server is running on http://localhost:"+PORT);
     connectDB()
