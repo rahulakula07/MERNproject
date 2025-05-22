@@ -6,12 +6,13 @@ import Navbar from "./components/Navbar"
 import { Toaster } from "react-hot-toast"
 import { useUserStore } from "./stores/useUserStore"
 import { useEffect } from "react"
-import LoadingSpinner from "./components/loadingSpinner"
 import AdminPage from "./pages/AdminPage"
 import CategoryPage from "./pages/CategoryPage"
 import CartPage from "./pages/cartPage"
 import PurchaseSuccessPage from "./pages/purchaseSuccessPage"
 import { useCartStore } from "./stores/useCartStore"
+import LoadingSpinner from "./components/LoadingSpinner"
+// import LoadingSpinner from "./components/loadingSpinner"
 
 
 function App() {
