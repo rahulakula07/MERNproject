@@ -1,4 +1,3 @@
-import { Route } from "lucide-react"
 import { Navigate, Route,Routes } from "react-router-dom"
 import SignUpPage from "./pages/SignUpPage"
 import LoginPage from "./pages/LoginPage"
