@@ -1,4 +1,4 @@
-// import { Route } from "lucide-react"
+import { Route } from "lucide-react"
 import { Navigate, Route,Routes } from "react-router-dom"
 import SignUpPage from "./pages/SignUpPage"
 import LoginPage from "./pages/LoginPage"
@@ -53,7 +53,7 @@ function App() {
 					<Route path='/category/:category' element={ <CategoryPage/> } />
 					<Route path='/cart' element={user ? <CartPage /> : <Navigate to='/login' />} />
           <Route path='/purchase-success' element={user ? <PurchaseSuccessPage /> : <Navigate to='/login' />} />
-          <Route path='/purchase-cancel' element={user ? <PurchaseCancelPage /> : <Navigate to='/login' />} />
+          <Route path='/purchase-cancel' element={user ? <PurchaseSuccessPage /> : <Navigate to='/login' />} />
 
 
       </Routes>
