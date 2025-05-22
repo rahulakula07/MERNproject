@@ -10,7 +10,7 @@ import LoadingSpinner from "./components/loadingSpinner"
 import AdminPage from "./pages/AdminPage"
 import CategoryPage from "./pages/CategoryPage"
 import CartPage from "./pages/cartPage"
-import PurchaseSuccessPage from "./pages/PurchaseSuccessPage"
+import PurchaseSuccessPage from "./pages/purchaseSuccessPage"
 import { useCartStore } from "./stores/useCartStore"
 
 
