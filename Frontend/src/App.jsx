@@ -12,7 +12,7 @@ import CartPage from "./pages/cartPage"
 import PurchaseSuccessPage from "./pages/purchaseSuccessPage"
 import { useCartStore } from "./stores/useCartStore"
 import LoadingSpinner from "./components/LoadingSpinner"
-// import LoadingSpinner from "./components/loadingSpinner"
+
 
 
 function App() {
