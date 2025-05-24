@@ -8,16 +8,20 @@ import couponRoutes from "./routes/coupon.route.js"
 import paymentRoutes from "./routes/paymnet.route.js"
 import analyticRoutes from "./routes/analytic.route.js"
 import path from "path"
-
-
-
+import cors from "cors"
 import { connectDB } from "./lib/db.js"
 dotenv.config()
 const app=express()
+
 // console.log(process.env.PORT)
 const PORT=process.env.PORT ||5000;
 
 // const __dirname = path.resolve()
+
+app.use(cors({
+    origin:["http://localhost:5173", "https://mer-nproject-liart.vercel.app"]
+}))
+
 app.use(express.json({limit:"10mb"}))
 app.use(cookieParser())
 
