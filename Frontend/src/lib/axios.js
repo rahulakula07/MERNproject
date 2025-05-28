@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstances=axios.create({
-    baseURL:"http://localhost:5000/api",
+    baseURL:"https://mernproject-f7fp.onrender.com/api",
     withCredentials:true,//send cookies to the server
 })
 
