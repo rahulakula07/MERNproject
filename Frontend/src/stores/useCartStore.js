@@ -22,7 +22,7 @@ export const useCartStore = create((set, get) => ({
 	applyCoupon: async (code) => {
 		try {
 			console.log("Validating code:", code);
-			const  response= await axios.get("/coupons/validate",  { code } )
+			const  response= await axios.post(`/coupons/validate?code=${code}`)
 			console.log("Coupon validated:", response.data);
 			set({coupon:response.data, isCouponApplied:true})
 			get().calculateTotals()
