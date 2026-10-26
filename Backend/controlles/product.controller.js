@@ -26,7 +26,7 @@ export const getFeaturedproducts=async (req,res)=>{
 
         //if not in redis we need to fetched it from the mongodb
         //lean is gonna resutrn plain js object insted of mongodn=b abject which is good for perfor manace
-        feacturedProducts=await product.find({isFeatured:true}).lean()
+        feacturedProducts=await Product.find({isFeatured:true}).lean()
 
         if(!feacturedProducts){
             return res.status(404).json({message:"no featured product found"})
